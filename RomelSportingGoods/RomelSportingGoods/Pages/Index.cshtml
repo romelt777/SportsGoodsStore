@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="banner">
+	@if (ViewData["Title"] != null)
+	{
+		if (ViewData["Title"].ToString() == "Home")
+		{
+			<div class="banner-image">
+				<img src="/photos/BBALL_FEATURE.jpg" alt="Banner" width="1000px">
+			</div>
+		}
+	}
+</div>
+
+<div class="pin-container">
+    @foreach (var item in Model.Product)
+    {
+
+        string imagePath = "/photos/" + item.Image;
+
+        <div class="pin-box">
+            <a asp-page="/ProductInfo" asp-route-id="@item.ProductId">
+                <img src="@imagePath" class="mb-2">
+            </a>
+            <p>
+                @Html.DisplayFor(modelItem => item.Name)
+            </p>
+            <p class="homeP">
+                @Html.DisplayFor(modelItem => item.Description)
+            </p>
+        </div>
+    }
+</div>

@@ -1,0 +1,161 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Home page image grid layout */
+
+.pin-container {
+    width: 100%;
+    margin: 20px auto;
+    columns: 3;
+    column-gap: 20px;
+/*    height: 30em
+*/}
+
+    .pin-container .pin-box {
+        width: 100%;
+        margin-bottom: 20px;
+        break-inside: avoid;
+        position: relative;
+        height: 30em;
+        border-radius: 35px 35px 35px 35px;
+    }
+
+        .pin-container .pin-box img {
+            max-width: 100%;
+            cursor: zoom-in;
+            padding-left:2em;
+            padding-top:2em;
+            height:20em
+        }
+
+
+            .pin-container .pin-box img:hover {
+                cursor: zoom-in;
+                filter: brightness(75%);
+            }
+
+.searchButton {
+    height: 2.5em;
+}
+
+.searchBar {
+    height: 2.5em;
+}
+
+.mySearch{
+    padding-top: 1.7em;
+}
+
+.pin-box{
+    background-color:gainsboro
+}
+
+.homeP{
+    height:3em;
+    overflow:auto;
+}
+
+/* Home page banner image */
+.banner-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/banner.jpg");
+    height: 37.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+    max-width:100%;
+}
+
+    .banner-image img {
+        height: 100%;
+        width: 100%;
+    }
+
+/*cart*/
+
+
+https://stackoverflow.com/questions/51304169/how-to-put-the-number-at-top-right-corner-of-cart-icon
+#cartIcon {
+    .badge{
+        padding-left: 9px;
+        padding-right: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+    }
+
+    .label-warning[href],
+    .badge-warning[href] {
+        background-color: #c67605;
+    }
+
+    #lblCartCount {
+        font-size: 12px;
+        background: #ff0000;
+        color: #fff;
+        padding: 0 5px;
+        vertical-align: top;
+        margin-left: -10px;
+    }
+}
+
+/*   Responsive*/
+
+
+@media only screen and (max-width: 900px) {
+
+
+    .banner-image img {
+        display: none;
+        visibility: hidden;
+    }
+
+    .banner-image {
+        display: none;
+        visibility: hidden;
+    }
+
+    .pin-container{
+        columns:2;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+
+    .banner-image img {
+        display: none;
+        visibility: hidden;
+    }
+
+    .banner-image {
+        display: none;
+        visibility: hidden;
+    }
+
+    .pin-container {
+        columns: 1;
+    }
+}
+

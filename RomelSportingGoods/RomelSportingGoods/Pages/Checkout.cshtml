@@ -1,0 +1,120 @@
+﻿@page
+@model RomelSportingGoods.Pages.CheckoutModel
+@{
+}
+@* https://github.com/HoanghoDev/cart_and_checkout/blob/main/checkout.js
+ *@
+ 
+    <header>
+        <style>
+
+                .checkoutLayout .right {
+                    background-color: gainsboro;
+                    border-radius: 20px;
+                    padding: 40px;
+                    color: black;
+                }
+
+                .checkoutLayout .form input,
+                .checkoutLayout .form select {
+                    width: 100%;
+                    padding: 10px 20px;
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    margin-top: 10px;
+                    border: none;
+                    background-color:   white;
+                    color: black;
+                }
+
+                .checkoutLayout .right .return .row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+
+                    .checkoutLayout .right .return .row div:nth-child(2) {
+                        font-weight: bold;
+                        font-size: x-large;
+                    }
+
+            .buttonCheckout {
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                background-color: #49D8B9;
+                margin-top: 20px;
+                font-weight: bold;
+                color: black;
+            } 
+        </style>
+    </header>
+    <div class="checkoutLayout">
+        <div class="right">
+            <form method="post" enctype="multipart/form-data" class="form">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="mb-3">
+                        <label style="font-size:2.5em;">Checkout</label><a style="margin-left:40em;font-size:1em;" href="/ShoppingCart">Return Shopping Cart</a>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.name" class="control-label"></label>
+                        <input asp-for="BillingInfo.name" class="form-control" />
+                        <span asp-validation-for="BillingInfo.name" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.address" class="control-label"></label>
+                        <input asp-for="BillingInfo.address" class="form-control">
+                        <span asp-validation-for="BillingInfo.address" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.city" class="control-label"></label>
+                        <input asp-for="BillingInfo.city"  class="form-control">
+                        <span asp-validation-for="BillingInfo.city" class="text-danger"></span>
+
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.province" class="control-label"></label>
+                        <input asp-for="BillingInfo.province" class="form-control">
+                        <span asp-validation-for="BillingInfo.province" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.postalCode" class="control-label"></label>
+                        <input asp-for="BillingInfo.postalCode" class="form-control">
+                        <span asp-validation-for="BillingInfo.postalCode" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.country" class="control-label"></label>
+                        <input asp-for="BillingInfo.country" class="form-control">
+                        <span asp-validation-for="BillingInfo.country" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.ccNumber" class="control-label"></label>
+                        <input asp-for="BillingInfo.ccNumber" class="form-control">
+                        <span asp-validation-for="BillingInfo.ccNumber" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.ccExpiryDate" class="control-label"></label>
+                        <input asp-for="BillingInfo.ccExpiryDate" class="form-control">
+                        <span asp-validation-for="BillingInfo.ccExpiryDate" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BillingInfo.cvv" class="control-label"></label>
+                        <input asp-for="BillingInfo.cvv" class="form-control">
+                        <span asp-validation-for="BillingInfo.cvv" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 ">
+                        <input type="submit" value="Place Order" class="btn btn-primary buttonCheckout" style="                width: 100%;
+                        height: 40px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #49D8B9;
+                        margin-top: 20px;
+                        font-weight: bold;
+                        color: black;" />
+                    </div>
+            </form>
+        </div>
+    </div>
+

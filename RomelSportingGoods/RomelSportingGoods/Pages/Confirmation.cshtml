@@ -1,0 +1,76 @@
+﻿@page
+@model RomelSportingGoods.Pages.ConfirmationModel
+@{
+    ViewData["Romel"] = "Romel";
+    double subtotal = Math.Round(Model.subtotal, 2);
+    double taxes = Math.Round(subtotal * 0.15, 2);
+    double total = Math.Round(subtotal + taxes + 10, 2);
+
+    var confirmationCode = Request.Cookies["confirmationCodeCookie"];
+    string? confirmationCodeString = confirmationCode?.ToString();
+
+}
+<h1>Confirmation - Order Confirmed</h1>
+<h3>Confirmation Code: @confirmationCodeString</h3>
+
+<div class="col-10">
+
+    @for (int i = 0; i < Model.Product.Count; i++)
+    {
+        if (Model.QuantityProducts[i] > 0)
+        {
+            int quantity = Model.QuantityProducts[i];
+
+            string imagePath = "/photos/" + Model.Product[i].Image;
+
+            <div class="card rounded-3 mb-4">
+                <div class="card-body p-4" style="border-radius: 35px 35px 35px 35px;">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-md-2 col-lg-2 col-xl-2">
+                            <img src="@imagePath"
+                                 class="img-fluid rounded-3" alt="Cotton T-shirt">
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                            <p class="lead fw-normal mb-2">
+                                @Html.DisplayFor(modelItem => Model.Product[i].Name)
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            @quantity
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h5 class="mb-0">
+                                $@Html.DisplayFor(modelItem => Model.Product[i].Price)
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    <div class="card mb-4">
+        <div class="card-body p-4 d-flex flex-row">
+            <table style="width:100%">
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <td>Subtotal</td>
+                    <td>$@subtotal</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Taxes (15%)</td>
+                    <td>$@taxes</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Delivery</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th>Total</th>
+                    <th>$@total</th>
+                </tr>
+            </table>
+        </div>
+    </div>

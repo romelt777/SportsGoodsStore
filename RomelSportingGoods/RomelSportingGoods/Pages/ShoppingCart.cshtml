@@ -1,0 +1,135 @@
+﻿@page
+@model RomelSportingGoods.Pages.ShoppingCartModel
+@{
+    ViewData["Romel"] = "Romel";
+    double subtotal = Math.Round(Model.subtotal, 2);
+    double taxes = Math.Round(subtotal * 0.15, 2);
+    double total = Math.Round(subtotal + taxes + 10,2);
+}
+
+
+@if (Model.emptyCart)
+{
+    <h1>Shopping Cart</h1>
+	<h2>Your cart is empty!</h2>
+	<a href="/Index"><h2>Return to shopping</h2></a>
+
+}
+else
+{
+@*     Source Used =>         https://mdbootstrap.com/docs/standard/extended/shopping-carts/
+ *@
+    <section class="h-100" style="background-color: #eee;border-radius: 35px 35px 35px 35px;">
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-10">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+                        <div>
+                            <p class="mb-0">
+                                <span class="text-muted">Sort by:</span> <a href="#!" class="text-body">
+                                    price <i class="fas fa-angle-down mt-1"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    @for (int i = 0;i < Model.Product.Count;i++)
+                    {
+                        if(Model.QuantityProducts[i] > 0)
+                        {
+                            int quantity = Model.QuantityProducts[i];
+
+                            string imagePath = "/photos/" + Model.Product[i].Image;
+
+                            <div class="card rounded-3 mb-4">
+                                <div class="card-body p-4" style="border-radius: 35px 35px 35px 35px;">
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                            <img src="@imagePath"
+                                                 class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                            <p class="lead fw-normal mb-2">
+                                                @Html.DisplayFor(modelItem => Model.Product[i].Name)
+                                            </p>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                            <button class="btn btn-link px-2"
+                                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+
+                                            <input id="form1" min="0" name="quantity" value="@quantity" type="number"
+                                                   class="form-control form-control-sm" />
+
+                                            <button class="btn btn-link px-2"
+                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                            <h5 class="mb-0">
+                                                $@Html.DisplayFor(modelItem => Model.Product[i].Price)
+                                            </h5>
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                            <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    <div class="card mb-4">
+                        <div class="card-body p-4 d-flex flex-row">
+@*                             <div class="form-outline flex-fill">
+                                <label class="form-label" for="form1">Subtotal</label>
+                            </div> *@
+                            <table style="width:100%">
+                                <tr>
+                                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                    <td>Subtotal</td>
+                                    <td>$@subtotal</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Taxes (15%)</td>
+                                    <td>$@taxes</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Delivery</td>
+                                    <td>$10.00</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <th>Total</th>
+                                    <th>$@total</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body p-4 d-flex flex-row">
+                            <div class="form-outline flex-fill">
+                                <input type="text" id="form1" class="form-control form-control-lg" />
+                                <label class="form-label" for="form1">Discound code</label>
+                            </div>
+                            <button type="button" class="btn btn-outline-warning btn-lg ms-3">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="/Checkout">
+                                <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+}
