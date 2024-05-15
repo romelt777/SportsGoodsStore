@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RomelSportingGoods")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be86f4c6b961a6bd03cdea0b956dcec198d7de6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edf4f6454fab0d8886869d668944261e708c2a1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("RomelSportingGoods")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RomelSportingGoods")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
