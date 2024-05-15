@@ -6,7 +6,7 @@ ECommerce CRUD store using C# .NET, Azure SQL database, Razor pages.
 
 - Store Landing Page: displays all items available for purchase.
   
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/home_page.png)
+![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/home_page2.png)
 
 - Item Detail Page: displays information about item, able to add to cart.
   
@@ -36,9 +36,17 @@ ECommerce CRUD store using C# .NET, Azure SQL database, Razor pages.
   
 ![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/admin_page.png)
 
+- Admin Restriction: user cant access admin page without login
+
+![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/admin_verification.png)
+
 - New Item Page
   
 ![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/new_item.png)
+
+- New Item Verification: item must be entered with all information.
+
+![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/create_verification.png)
 
 - Edit Item Page
   
@@ -48,6 +56,6 @@ ECommerce CRUD store using C# .NET, Azure SQL database, Razor pages.
   
 ![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/delete_item.png)
 
-- Item Detail Page: displays information about item, able to add to cart.
+- Admin Navigation Bar: products page (admin page) is available, user logout.
   
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/item_detail.png)
+![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/after_admin_login.png)
