@@ -36,7 +36,7 @@ ECommerce CRUD store using C# .NET, Azure SQL database, Razor pages.
   
 ![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/admin_page.png)
 
-- Admin Restriction: user cant access admin page without login
+- Admin Restriction: user cant access admin page without login, redirects to login.
 
 ![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/admin_verification.png)
 
