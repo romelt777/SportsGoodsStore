@@ -1,61 +1,58 @@
-# SportsGoodsStore
+# SportsGoodsStore — E-commerce Backend Application
 
-ECommerce CRUD store using C# .NET, Azure SQL database, Razor pages. 
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-8.0-purple)
+![C#](https://img.shields.io/badge/C%23-.NET-blue)
+![Azure SQL](https://img.shields.io/badge/Database-Azure%20SQL-lightgrey)
+![Auth](https://img.shields.io/badge/Auth-Admin/User-orange)
 
-### Photos of Project
+SportsGoodsStore is an ASP.NET Core e-commerce web application that demonstrates **backend development, role-based access control, and database-driven workflows**. The system supports a product catalog, shopping cart, checkout validation, and admin management.
 
-- Store Landing Page: displays all items available for purchase.
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/home_page2.png)
+---
 
-- Item Detail Page: displays information about item, able to add to cart.
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/item_detail.png)
+## Overview
 
-- Navigation Bar: contains cart which updates quantity. 
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/dynamic_cart.png)
+Users can browse and purchase items, while admins can manage inventory through a secure admin interface. The project highlights **authorization rules, data validation, and persistent storage** in a cloud-connected backend.
 
-- Shopping Cart Page: displays price, quantity, calculates total price.
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/shopping_cart.png)
+---
 
-- Checkout Page: checkout form for customer information
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/checkout_page.png)
+## Core Features
 
-- Checkout Verication: credit card number must be proper format.
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/checkout_verification.png)
+- Full CRUD operations for products and shopping cart
+- User authentication and role-based authorization (admin vs. customer)
+- Checkout form with **input validation** for secure purchases
+- Admin interface for adding, editing, and deleting items
+- Cart management with dynamic quantity and total price calculation
+- Azure SQL database for persistent storage
 
-- Admin Login Page
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/admin_login.png)
+---
 
-- Admin Page: displays all items and actions.
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/admin_page.png)
+## Technology Stack
 
-- Admin Restriction: user cant access admin page without login, redirects to login.
+**Backend**
+- C# / ASP.NET Core  
+- Razor Pages for server-rendered UI  
+- Azure SQL Database  
+- Authentication via ASP.NET Identity  
 
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/admin_verification.png)
+**Frontend**
+- Razor Views / HTML / CSS  
 
-- New Item Page
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/new_item.png)
+---
 
-- New Item Verification: item must be entered with all information.
+## Screenshots
 
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/create_verification.png)
+### Core Views
+![Store Landing Page](SCREENSHOTS/home_page2.png)
+![Item Detail Page](SCREENSHOTS/item_detail.png)
+![Shopping Cart](SCREENSHOTS/shopping_cart.png)
+![Admin Page](SCREENSHOTS/admin_page.png)
+![Checkout Verification](SCREENSHOTS/checkout_verification.png)
 
-- Edit Item Page
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/edit_item.png)
+---
 
-- Delete Item: deletes item from page, and Azure database. 
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/delete_item.png)
+## Key Takeaways
 
-- Admin Navigation Bar: products page (admin page) is available, user logout.
-  
-![](https://github.com/romelt777/SportsGoodsStore/blob/main/SCREENSHOTS/after_admin_login.png)
+- Demonstrates secure backend development with ASP.NET Core and Azure SQL  
+- Role-based access control for admin and user workflows  
+- Input validation and CRUD for e-commerce operations  
+- Complements other projects by showcasing **cloud database integration and backend workflows**
