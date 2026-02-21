@@ -1,58 +1,51 @@
-# SportsGoodsStore — E-commerce Backend Application
+# SportsGoodsStore — E-commerce Web Application
 
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-8.0-purple)
 ![C#](https://img.shields.io/badge/C%23-.NET-blue)
 ![Azure SQL](https://img.shields.io/badge/Database-Azure%20SQL-lightgrey)
 ![Auth](https://img.shields.io/badge/Auth-Admin/User-orange)
 
-SportsGoodsStore is an ASP.NET Core e-commerce web application that demonstrates **backend development, role-based access control, and database-driven workflows**. The system supports a product catalog, shopping cart, checkout validation, and admin management.
+SportsGoodsStore is an ASP.NET Core e-commerce application with role-based access control and Azure SQL persistence. The system includes product management, shopping cart functionality, checkout validation, and an admin interface.
 
 ---
 
 ## Overview
 
-Users can browse and purchase items, while admins can manage inventory through a secure admin interface. The project highlights **authorization rules, data validation, and persistent storage** in a cloud-connected backend.
+The application supports two roles:
+
+- **Customers** can browse products, manage a shopping cart, and complete checkout.
+- **Admins** can add, edit, and delete products through a restricted interface.
+
+Authorization rules ensure only admins can modify inventory.
 
 ---
 
-## Core Features
+## Implementation Details
 
-- Full CRUD operations for products and shopping cart
-- User authentication and role-based authorization (admin vs. customer)
-- Checkout form with **input validation** for secure purchases
-- Admin interface for adding, editing, and deleting items
-- Cart management with dynamic quantity and total price calculation
+- Full CRUD operations for products
+- Shopping cart with dynamic quantity and total price calculation
+- Checkout form with server-side validation
+- Role-based authorization using ASP.NET Identity
 - Azure SQL database for persistent storage
+- Server-rendered UI using Razor Pages
 
 ---
 
-## Technology Stack
+## Tech Stack
 
-**Backend**
-- C# / ASP.NET Core  
-- Razor Pages for server-rendered UI  
-- Azure SQL Database  
-- Authentication via ASP.NET Identity  
-
-**Frontend**
-- Razor Views / HTML / CSS  
+- ASP.NET Core 8
+- C#
+- Razor Pages
+- ASP.NET Identity
+- Azure SQL Database
+- HTML / CSS
 
 ---
 
 ## Screenshots
 
-### Core Views
 ![Store Landing Page](SCREENSHOTS/home_page2.png)
 ![Item Detail Page](SCREENSHOTS/item_detail.png)
 ![Shopping Cart](SCREENSHOTS/shopping_cart.png)
 ![Admin Page](SCREENSHOTS/admin_page.png)
 ![Checkout Verification](SCREENSHOTS/checkout_verification.png)
-
----
-
-## Key Takeaways
-
-- Demonstrates secure backend development with ASP.NET Core and Azure SQL  
-- Role-based access control for admin and user workflows  
-- Input validation and CRUD for e-commerce operations  
-- Complements other projects by showcasing **cloud database integration and backend workflows**
