@@ -1,9 +1,5 @@
 # SportsGoodsStore — E-commerce Web Application
 
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-8.0-purple)
-![C#](https://img.shields.io/badge/C%23-.NET-blue)
-![Azure SQL](https://img.shields.io/badge/Database-Azure%20SQL-lightgrey)
-![Auth](https://img.shields.io/badge/Auth-Admin/User-orange)
 
 SportsGoodsStore is an ASP.NET Core e-commerce application with role-based access control and Azure SQL persistence. The system includes product management, shopping cart functionality, checkout validation, and an admin interface.
 
