@@ -9,8 +9,8 @@ SportsGoodsStore is an ASP.NET Core e-commerce application with role-based acces
 
 The application supports two roles:
 
-- **Customers** can browse products, manage a shopping cart, and complete checkout.
-- **Admins** can add, edit, and delete products through a restricted interface.
+- Customers can browse products, manage a shopping cart, and complete checkout.
+- Admins can add, edit, and delete products through a restricted interface.
 
 Authorization rules ensure only admins can modify inventory.
 
